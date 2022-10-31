@@ -29,7 +29,7 @@ SECRET_KEY = 'hft-c&55m8+&8o1ze2h80n(h8z!*@_&76n+vz^)@=9%-g-*4sb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://westocksatoy.herokuapp.com/']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
