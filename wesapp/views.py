@@ -18,7 +18,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 
 from .models import Post, Comment
 import requests
-API_KEY = '2c0f2edec2944d49a72c0fb05ad44397'
+# API_KEY = '2c0f2edec2944d49a72c0fb05ad44397'
 
 # def HomeView(ListView):
 #     model = Post
@@ -67,12 +67,12 @@ def contact(request):
 
 
 def news(request):
-    url = f'https://newsapi.org/v2/everything?q=market&apiKey={API_KEY}'
-    data = requests.get(url)
-    response = data.json()
-    articles = response['articles']
-    context = {'articles': articles}
-    return render(request, 'news.html', context)
+    # url = f'https://newsapi.org/v2/everything?q=market&apiKey={API_KEY}'
+    # data = requests.get(url)
+    # response = data.json()
+    # articles = response['articles']
+    # context = {'articles': articles}
+    return render(request, 'news.html')
 
 
 def like_post(request):
