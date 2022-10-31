@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .contactt{
+    
+        margin: 130px 200px 80px 200px;
+    }
+</style>
+
+
+<!--Section: Contact v.2-->
+<section  class=" contactt">
+
+    <!--Section heading-->
+    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    <!--Section description-->
+    <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
+        a matter of hours to help you.</p>
+
+    <div  class="row ">
+
+        <!--Grid column-->
+        <div   class="col-md-9 mb-md-0 mb-5 ">
+            <form id="contact-form" name="contact-form" action="/contact" method="POST">
+                {% csrf_token %}
+                <div  >
+                    {% for message in messages %}
+                    <div class="alert alert-danger "role="alert">
+                        {{message}}
+                    </div>
+                    {% endfor %}
+                    </div>
+
+                <!--Grid row-->
+                <div style="margin-bottom: 16px;" class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" >Your name</label>
+                            <input type="text" id="name" name="name" class="form-control">
+                            
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="">Your email</label>
+                            <input type="email" id="email" name="email" class="form-control">
+                            
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div style="margin-bottom: 16px;" class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="phone" class="">Phone</label>
+                            <input type="phone" id="phone" name="phone" class="form-control">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div style="margin-bottom: 16px;" class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label for="message">Describe your issue</label>
+                            <textarea type="content" id="content" name="content" rows="2" class="form-control md-textarea"></textarea>
+                            
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+            </form>
+
+            <div class="text-center mt-3 text-md-left">
+                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+            </div>
+            <div class="status"></div>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                 
+                    <p><a target="_blank" style="text-decoration: none; color: black;" href="https://www.google.com/maps/place/Gopalganj,+Bihar+841428/data=!4m2!3m1!1s0x39931ace38b4be2b:0xed4849770012e298?sa=X&ved=2ahUKEwjZ0_v1mP76AhVwgtgFHb3pCTUQ8gF6BAgIEAE">Gopalganj, 841501, India</a></p>
+                </li>
+
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p>+91 XXXX 921786</p>
+                </li>
+
+                <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                    
+                    <p><a target="_blank" style="text-decoration: none; color: black;" href="https://mail.google.com/mail/u/0/#sent?compose=GTvVlcSHxTsKBkTWlDJHTDLzBZdBkQSdnXnjZnfhLpSRcCDVpdVrZKjckcXXnmTDdcLgxKNcCgKlg">mehdialam2002@gmail.com</a></p>
+
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+
+
+
+
+
+
+
+{% endblock  %}

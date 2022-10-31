@@ -1,0 +1,177 @@
+<!-- 
+
+
+{{post.title_tag}}
+
+
+    
+
+<h1>Edit Blog Post</h1>
+
+
+<form action="" method="post" encrypt="multipart/form-data">
+   {% csrf_token %}
+   {{form.as_p}}
+   {{ form.media}}
+   
+   <button>Update</button>
+</form> 
+  -->
+<!-- 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+
+        .forrm{
+            margin-top: 40px;
+            margin-left: 300px;
+            margin-right: 400px;
+            padding: 19px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+        .post_cancel{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body> -->
+<!--    
+    {{post.title_tag}}
+
+    
+    <form method="post" encrypt="multipart/form-data"  class="forrm">
+        {% csrf_token %}
+        <h1>Add Blog Post</h1>
+        <input class="form-control"  type="hidden"  >
+       <p><label class="form-label" for="id_title"><strong>Title:</strong></label> <input type="text" name="title" maxlength="255" required id="id_title"></p>
+   
+    <p><label for="id_content"><strong>Content:</strong></label> <input type="text" name="content" maxlength="100" required id="id_content"></p>
+    <p><label for="id_author"><strong>Author:</strong></label> <input type="text" name="author" maxlength="13" required id="id_author"></p>
+    <p><label for="id_header_image"><strong>Image:</strong></label> <input type="file" name="header_image" accept="image/*" id="id_header_image"></p>
+
+    <div class="post_cancel">
+        <button class="btn btn-sm
+     btn-success">Post</button>
+    <a class="btn btn-sm
+        btn-danger" href="/feed">Cancel</a>
+    </div>
+     </form> -->
+
+
+
+
+
+         
+
+
+<!-- 
+
+<form action="" method="post"  encrypt="multipart/form-data" class="forrm">
+    <h1>Edit Blog Post</h1>
+        {% csrf_token %}
+   <input class="form-control" type="hidden" >
+   <p><label for="id_title">Title:</label> <input class="form-control" type="text" name="title" maxlength="255" required id="id_title"></p>
+   <p><label for="id_content2">Content:</label> <textarea class="form-control" name="content2" cols="40" rows="10" required id="id_content2">
+</textarea></p>
+<p><label for="id_header_image">Header image:</label> <input type="file" name="header_image" accept="image/*" id="id_header_image"></p>
+<p><label for="id_author">Author:</label> <input class="form-control" type="text" name="author" maxlength="13" required id="id_author"></p>
+
+   
+   
+<div class="post_cancel">
+    <button class="btn btn-sm
+ btn-success">Post</button>
+<a class="btn btn-sm
+    btn-danger" href="/feed">Cancel</a>
+</div>
+</form>
+
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+
+        .forrm{
+            margin-top: 40px;
+            margin-left: 300px;
+            margin-right: 400px;
+            padding: 19px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+        .post_cancel{
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body> 
+
+
+<form class="forrm" action="" method="post" encrypt="multipart/form-data">
+    {% csrf_token %}
+    <h1>Add Blog Post</h1>
+   <input type="hidden" >
+   <p><label for="id_title">Title:</label> 
+    <input class="form-control" type="text" name="title" value="" maxlength="255" required id="id_title"></p>
+<p><label for="id_header_image">Header image:</label>
+     <input class="form-control" type="file" name="header_image" accept="image/*" id="id_header_image"></p>
+<p><label for="id_author">Author:</label>
+     <input class="form-control" type="text" name="author" value="{{request.user.username}}" readonly maxlength="13" required id="id_author"></p> 
+
+<p><label for="id_content2">Content2:</label> 
+
+    <textarea class="form-control" name="content2" cols="40" rows="10" required id="id_content2">
+
+</textarea></p>
+
+<div class="post_cancel">
+    <button class="btn btn-sm
+ btn-success">Post</button>
+<a class="btn btn-sm
+    btn-danger" href="/feed">Cancel</a>
+</div>
+</form> 
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html> 

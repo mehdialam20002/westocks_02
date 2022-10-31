@@ -1,0 +1,86 @@
+
+
+
+<!-- {{post.title_tag}}
+
+
+    
+
+<h1>Edit Blog Post</h1>
+
+
+<form action="" method="post" encrypt="multipart/form-data">
+   {% csrf_token %}
+   {{form.as_p}}
+   {{ form.media}}
+   
+   <button>Update</button>
+</form>  -->
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+<style>
+.forrm{
+   margin-top: 40px;
+   margin-left: 300px;
+   margin-right: 400px;
+   padding: 19px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.post_cancel{
+   display: flex;
+   justify-content: space-between;
+  
+}
+.canc{
+   display: flex;
+   justify-content: space-between;
+}
+</style>
+
+
+
+
+    
+
+
+<!-- 
+
+<form class="forrm" action="" method="post" encrypt="multipart/form-data">
+   {% csrf_token %}
+   <h1>Edit Blog Post</h1>
+   <input type="hidden" >
+   <p><label for="id_title"><strong>Title:</strong></label> <input type="text" name="title" value="Things to buy in Dhanteras 2022" maxlength="255" required id="id_title"></p>
+<p><label for="id_content"><strong>Content:</strong></label> <input type="text" name="content" value="For the most part, purchasing gold and silver in one form or another marks Dhanteras, which is regarded as a holy day for making new purchases. However, very few people take advantage of the chance to invest in financial instruments that increase" maxlength="255" required id="id_content"></p>
+   
+  <div class="canc">
+    
+   <button class="btn btn-success">Update</button>
+   <a href="/feed" class="btn btn-danger">Cancel</a>
+  </div>
+</form>
+
+ -->
+
+
+<form class="forrm" action="" method="post" encrypt="multipart/form-data">
+   {% csrf_token %}
+   <h1>Edit Blog Post</h1>
+   <input type="hidden"  >
+   <p><label for="id_title">Title:</label>
+       <input type="text" class="form-control" name="title"  maxlength="255" required id="id_title"></p>
+<p><label for="id_content2">Content2:</label>
+    <textarea class="form-control" name="content2" cols="30" rows="7" required id="id_content2">
+</textarea></p>
+   
+<div class="canc">
+    
+   <button class="btn btn-success">Update</button>
+   <a href="/feed" class="btn btn-danger">Cancel</a>
+  </div>
+</form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>  

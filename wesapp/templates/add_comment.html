@@ -1,0 +1,149 @@
+
+<!-- 
+
+
+
+
+
+    
+
+<h1>Edit Blog Post</h1>
+
+
+<form action="" method="post" encrypt="multipart/form-data">
+   <input type="hidden" name="csrfmiddlewaretoken" value="yNGRoHrR9S4CEkYoSrtwg7eTGhesia6hcsoSOG8z6xhVpScBCp2BfdMW0hfoykkI">
+   <p><label for="id_post">Post:</label> <select name="post" required id="id_post">
+  <option value="" selected>---------</option>
+
+  <option value="26">Message from de by Manish Gupta</option>
+
+  <option value="27">Message from Union Budget 2022 by Mehdi</option>
+
+  <option value="28">Message from How much Tax is paid on Bond by Manish</option>
+
+  <option value="29">Message from wew by ddd</option>
+
+  <option value="30">Message from sdakjfds by askfdska</option>
+
+  <option value="31">Message from raaaaaaaaaaaa by aaaaaaaa</option>
+
+  <option value="32">Message from a by a</option>
+
+  <option value="35">Message from loove by LOVE</option>
+
+</select></p>
+<p><label for="id_name">Name:</label> <input type="text" name="name" maxlength="255" required id="id_name"></p>
+<p><label for="id_body">Body:</label> <textarea name="body" cols="40" rows="10" required id="id_body">
+</textarea></p>
+   
+   
+   <button>Update</button>
+</form>
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+     <title>Document</title>
+     <style>
+ 
+         .forrm {
+             margin-top: 40px;
+             margin-left: 300px;
+             margin-right: 400px;
+             padding: 19px;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 7px;
+ 
+         }
+         .post_cancel{
+             display: flex;
+             justify-content: space-between;
+         }
+         
+     </style>
+ </head>
+ <body>
+ <!--    
+     
+ 
+     
+     <form method="post" encrypt="multipart/form-data"  class="forrm">
+         <input type="hidden" name="csrfmiddlewaretoken" value="yNGRoHrR9S4CEkYoSrtwg7eTGhesia6hcsoSOG8z6xhVpScBCp2BfdMW0hfoykkI">
+         <h1>Add Blog Post</h1>
+         <input class="form-control"  type="hidden"  >
+        <p><label class="form-label" for="id_title"><strong>Title:</strong></label> <input type="text" name="title" maxlength="255" required id="id_title"></p>
+    
+     <p><label for="id_content"><strong>Content:</strong></label> <input type="text" name="content" maxlength="100" required id="id_content"></p>
+     <p><label for="id_author"><strong>Author:</strong></label> <input type="text" name="author" maxlength="13" required id="id_author"></p>
+     <p><label for="id_header_image"><strong>Image:</strong></label> <input type="file" name="header_image" accept="image/*" id="id_header_image"></p>
+ 
+     <div class="post_cancel">
+         <button class="btn btn-sm
+      btn-success">Post</button>
+     <a class="btn btn-sm
+         btn-danger" href="/feed">Cancel</a>
+     </div>
+      </form> -->
+ 
+ <div class="forrm">
+
+ 
+
+<h1>Add Comment</h1>
+<br><br>
+<div class="form-group">
+    <form action="" method="post">
+{% csrf_token %}
+    
+<p><label for="id_name">Name:</label> 
+    <input class="form-control" type="text"name="name" value="{{request.user.username}}" readonly placeholder="Your name" maxlength="255" required id="id_name"></p>
+<p><label for="id_body">Comment</label> <textarea class="form-control" placeholder="Your Comment" name="body" cols="40" rows="4" required id="id_body">
+</textarea></p>
+        <button class="btn btn-success">Add Comment</button>
+        <a class="btn btn-danger mx-4"  href="/feed">Cancel</a>
+    </form>
+    
+</div>
+</div>
+
+
+
+ 
+ 
+ 
+          
+ 
+ 
+ 
+<!--  
+ <form action="" method="post" class="forrm">
+     <h1>Comment on Blog Post</h1>
+         <input type="hidden" name="csrfmiddlewaretoken" value="yNGRoHrR9S4CEkYoSrtwg7eTGhesia6hcsoSOG8z6xhVpScBCp2BfdMW0hfoykkI">
+    <input class="form-control" type="hidden" >
+    <p><label for="id_title">Title:</label> <input class="form-control" type="text" name="title" maxlength="255" required id="id_title"></p>
+    <p><label for="id_content2">Content:</label> <textarea class="form-control" name="content2" cols="40" rows="10" required id="id_content2">
+ </textarea></p>
+ <p><label for="id_header_image">Header image:</label> <input type="file" name="header_image" accept="image/*" id="id_header_image"></p>
+ <p><label for="id_author">Author:</label> <input class="form-control" type="text" name="author" maxlength="13" required id="id_author"></p>
+ 
+    
+    
+ <div class="post_cancel">
+     <button class="btn btn-sm
+  btn-success">Add Comment</button>
+ <a class="btn btn-sm
+     btn-danger" href="/feed">Cancel</a>
+ </div>
+ </form>
+  -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+ 
+ 
+ 
+ </body>
+ </html>
